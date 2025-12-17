@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(cat:*)",
+      "Bash(python3:*)",
+      "Bash(.venv/bin/pytest:)",
+      "Bash(echo:*)"
+    ]
+  }
+}
