@@ -32,6 +32,16 @@ sourceSets {
 // Ensure proto compilation happens before Java compilation
 compileJava.dependsOn compileMainProtos
 
+// Ensure proto compilation happens before sources jar creation
+tasks.named('sourcesJar').configure {
+    dependsOn compileMainProtos
+}
+
+// Ensure proto compilation happens before license check
+tasks.named('licenseMain').configure {
+    dependsOn compileMainProtos
+}
+
 // Include .proto files in the published JAR so users can import them
 processResources {
     from('src/main/proto') {

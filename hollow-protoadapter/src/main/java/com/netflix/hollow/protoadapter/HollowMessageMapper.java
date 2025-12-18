@@ -829,6 +829,8 @@ public class HollowMessageMapper {
 
     /**
      * Get the state engine.
+     *
+     * @return the state engine
      */
     public HollowWriteStateEngine getStateEngine() {
         return stateEngine;
